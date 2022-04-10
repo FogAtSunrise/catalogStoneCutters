@@ -1,66 +1,374 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	
-	
-	<link rel="stylesheet" href="css/page_style.css">  
-	 <link rel="shortcut icon" href="resources/log3.ico" type="image/x-icon">  
-	 
-
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet"> 
-
-	 
-	<title>Главная</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/page_style.css" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="resources/log3.ico" type="image/x-icon" />
+    <title>Редактор</title>
   </head>
-  
   <body>
-
-  <div  class="bars" >
-  
-    <nav class="navbar" id="mainbar" >
-	
-      <a class="name_main" href="index.html" >
-	  <img  src="resources/log3.ico" />
-	  Колыванский камнерезный завод
-	  </a>
- 
-    </nav>
-
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<div class="navbar-nav">
-						<a class="nav-link" href="index.html">Главная</a>
-						<a class="nav-link" href="catalog.html">Каталог изделий</a>
-						<a class="nav-link" href="factory.html">О заводе</a>
-						<a class="nav-link" href="contacts.html">Контакты</a>
-					</div>
-     </div>
-  <div class="btn-authorize">
-          <a type="button right" class="btn" href="user.html">Вход</a>
-        </div>
-  </nav>
+    <!-- ШАПКА САЙТА -->
+    <nav class="navbar navbar-expand-md navbar-light panel">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img class="px-2" alt="..." src="resources/log3.ico" /></a
+        ><a class="navbar-brand link_style_for_main" href="index.html" id="main_name"> ГУП «Колыванский камнерезный<br/>завод имени И.И. Ползунова»</a>
+		<button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
    
-</div>
-  
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--  -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог изделий</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#id_1">Материал</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#id_2">Изделие</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#id_3">Заказ</a>
+            </li>
+          </ul>
+          <form class="d-flex me-2 my-2">
+            <input class="me-2" type="text" />
+            <button class="btn btn-dark" type="submit">Поиск</button>
+          </form>
+          <a class="btn btn-dark my-2" href="user.html">Вход</a>
+        </div>
+      </div>
+    </nav>
+	
+	
+    <!-- КРОШКИ -->
+    <nav class="block_back" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a class="link_style" href="index.html">Главная</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Редатор</li>
+      </ol>
+    </nav>
+	
+	
+    <!-- ОСНОВНАЯ ЧАСТЬ -->
+	
+	 <!-- ТАБЛИЦА 1 -->
+    <div class="container block_back">
+      <a id="id_1" class="link_style_in_redact"
+        >Редактировать данные материала</a
+      >
+      <form class="p-2">
+        <div class="mt-2">
+          <label>Наименование:</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Введите наименование"
+          />
+        </div>
+        <div class="mt-2">
+          <label>Описание:</label> <input class="form-control" />
+        </div>
+        <div class="row p-3">
+          <button type="button" class="btn btn-success col-md-2 pb-2 me-2 mt-2">
+            Сохранить
+          </button>
+          <button type="button" class="btn btn-danger col-md-2 mt-2">
+            Отменить
+          </button>
+        </div>
+      </form>
+    </div>
+	
+	
+	
+	 <!-- ТАБЛИЦА 2 -->
+    <div class="container block_back my-5">
+      <a id="id_2" class="link_style_in_redact">Редактировать данные изделия</a>
+      <form class="p-2">
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <label>Наименование:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите наименование"
+            />
+          </div>
+          <div class="col-md-6 mt-2">
+            <label>Категория:</label>
+            <select name="category" class="form-control" id="category">
+              <option>Вазы</option>
+              <option>Визитницы</option>
+              <option>Гравировки</option>
+              <option>Памятники</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <label>Размеры:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите размеры"
+            />
+          </div>
+          <div class="col-md-6 mt-2">
+            <label>Цена:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите цену"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <label>Список материалов:</label>
+            <div class="scroll-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Яшма</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Гранит</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Изумруд</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" class="btn btn-success col-md-4 mt-2">
+              Добавить
+            </button>
+          </div>
+          <div class="col-md-6 mt-2">
+            <label>Описание:</label>
+            <textarea class="form-control" name="message" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="row p-3">
+          <hr />
+          <button type="button" class="btn btn-success col-md-2 pb-2 me-2 mt-2">
+            Сохранить
+          </button>
+          <button type="button" class="btn btn-danger col-md-2 mt-2">
+            Отменить
+          </button>
+        </div>
+      </form>
+    </div>
+	
+	
+	 <!-- ТАБЛИЦА 3 -->
+    <div class="container block_back my-5">
+      <a id="id_3" class="link_style_in_redact">Редактировать данные заказа</a>
+      <form class="p-2">
+	  <div class="row">
+          <div class="col-md-12 mt-2">
+            <label>Номер заказа:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите номер заказа"
+            />
+          </div>
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <label>Фамилия:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите вашу фамилию"
+            />
+          </div>
+          <div class="col-md-6 mt-2">
+            <label>Имя:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите ваше имя"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-2">
+            <label>Отчество:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите ваше отчество"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <label>E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email1"
+              placeholder="Введите Email"
+            />
+          </div>
+          <div class="col-md-6 mt-2">
+            <label>Номер телефона:</label>
+            <input
+              type="tel"
+              name="telephone"
+              class="form-control"
+              id="phone"
+              placeholder="Введите номер в формате +7-XXX-XXX-XX-XX"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-2">
+            <label>Адрес:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Введите ваш адрес"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-2">
+            <label>Список изделий:</label>
+            <div class="scroll-table">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Шкатулка "Цветок"</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Браслет "Ящерица"</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ваза "Рассвет"</td>
+                    <td>
+                      <button type="button" class="btn btn-primary col-md-4">
+                        Редактировать
+                      </button>
+                      <button type="button" class="btn btn-danger col-md-4">
+                        Удалить
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button type="button" class="btn btn-success col-md-2 mt-2">
+              Добавить
+            </button>
+          </div>
+        </div>
+        <div class="row p-3">
+          <hr />
+          <button type="button" class="btn btn-success col-md-2 pb-2 mx-2 mt-2">
+            Сохранить
+          </button>
+          <button type="button" class="btn btn-danger col-md-2 mt-2">
+            Отменить
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! --><!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS --><!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
